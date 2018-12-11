@@ -1,0 +1,3 @@
+[submodule "TheGadflyProject"]
+	path = TheGadflyProject
+	url = https://github.com/TheGadflyProject/TheGadflyProject.git
