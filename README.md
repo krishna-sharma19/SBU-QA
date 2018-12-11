@@ -103,7 +103,7 @@ python run_squad.py \
   --output_dir=$OUTPUT_DIR 
   ```
 ### TODO
-[x] Fine tune BERT on SQUAD
-[x] Create document classifier to get context
-[] ADD DEMO
+- [x] Fine tune BERT on SQUAD                                                          
+- [x] Create document classifier to get context                                               
+- [] ADD DEMO                                                
 
