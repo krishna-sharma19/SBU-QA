@@ -105,5 +105,5 @@ python run_squad.py \
 ### TODO
 - [x] Fine tune BERT on SQUAD                                                          
 - [x] Create document classifier to get context                                               
-- [] ADD DEMO                                                
+- [ ] ADD DEMO                                                
 
