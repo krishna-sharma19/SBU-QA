@@ -45,6 +45,25 @@ python run_squad.py \
 ### How can I predict my own questions and contexts?   
 You just need to generate json from doc_classifier.ipynb by passing the list of question and context to the create_json() methond and then run the fine tuned network for prediction.            
 NOTE: Please note that output folder must not be empty and should contain checkpoint and data files  
+#### Generating SQUAD style json file - 
+```
+#You can also generate json for you own context and paragraphs
+custom_para = ['''Domestic Student Health Insurance Plan (SHIP) .Benefits and Highlights of the SHIP.SHIP 
+has been developed especially for Stony Brook students (and their dependents) to provide access to comprehensive
+care that complements the quality health services on campus.The details of the plan are reviewed and recommended
+each year by committee members to ensure that the coverage is well-suited to the needs of the Stony Brook students 
+and respectful of their budgets. SHIP is administered by United Healthcare. The Plans meet all of the student health
+insurance standards developed by the American College Health Association.SHIP is tailor-made for the college
+population.Provides continuous coverage at a reasonable cost for most on or off-campus medical care over 
+Fall/Winter and Spring/Summer Semesters.Covers pre-existing medical conditions & preventative care.
+Annual deductible $200 for an individual.Annual out of pocket limit of $3,000 which includes deductibles, 
+copays and coinsurance.Covers inpatient and outpatient mental health care.No deductible applied to prescription 
+drug coverage.Please note: Office visits for Primary Care and Specialists have a $35 copayment 
+with 0% coinsurance with a referral and 30% coinsurance without a referral.''']
+custom_ques = ["What is the annual deductible amount for SHIP?"]
+json_file = create_json(custom_para,custom_ques)
+```
+#### Generating predictions for this file
 ```
 python run_squad.py \
   --vocab_file=$BERT_BASE_DIR/vocab.txt \
@@ -53,7 +72,7 @@ python run_squad.py \
   --do_train=False \
   --train_file=train-v1.2.json \
   --do_predict=True \
-  --predict_file='handmade_qa_sbu.json' \
+  --predict_file='qna_sbu_test.json' \
   --train_batch_size=8 \
   --learning_rate=3e-5 \
   --num_train_epochs=2.0 \
@@ -61,7 +80,11 @@ python run_squad.py \
   --doc_stride=128 \
   --output_dir=$OUTPUT_DIR 
   ```
-### How can I test on your handmade json file?  
+#### See your answer -
+```
+!cat output_small/predictions.json
+```
+### How can I test on your hand annotated test json file?  
 You can test our system on fine-tuned network with the hand annotated dataset with the following command
 ```
 python run_squad.py \
