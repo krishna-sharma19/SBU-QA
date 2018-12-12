@@ -4,3 +4,6 @@
 [submodule "InferSent1"]
 	path = InferSent1
 	url = https://github.com/facebookresearch/InferSent
+[submodule "InferSent"]
+	path = InferSent
+	url = https://github.com/hirenmayani/InferSent.git
