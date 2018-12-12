@@ -1,3 +1,6 @@
 [submodule "TheGadflyProject"]
 	path = TheGadflyProject
 	url = https://github.com/TheGadflyProject/TheGadflyProject.git
+[submodule "InferSent1"]
+	path = InferSent1
+	url = https://github.com/facebookresearch/InferSent
