@@ -64,6 +64,10 @@ with 0% coinsurance with a referral and 30% coinsurance without a referral.''']
 custom_ques = ["What is the annual deductible amount for SHIP?"]
 json_file = create_json(custom_para,custom_ques)
 ```
+
+We used this to find context paragraph containing answer. Basic indea is question embedding should be closer to the paragraph containing the answer. Primary code change is in Infersent/encoder/Infersent.ipynb.
+
+
 #### Generating predictions for this file
 ```
 python run_squad.py \
