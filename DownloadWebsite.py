@@ -69,7 +69,7 @@ def preprocessFile(inputFile="/Volumes/10/NLP/bert/sbu_small_pretrain_raw.txt",o
 getWikiData("Stony Brook University")
 #preprocessFile()
 
-pretrainData = "\
+createPretrainData = "\
 python create_pretraining_data.py \
   --input_file=/Volumes/10/NLP/bert/sbu_small_pretrain.txt \
   --output_file=/Volumes/10/NLP/bert/sbu_small_pretrain.tfrecord \
@@ -108,4 +108,5 @@ pretranin = "python run_pretraining.py \
   --num_warmup_steps=10 \
   --learning_rate=2e-4"
   
+#os.system(createPretrainData)
 #os.system(pretranin)
