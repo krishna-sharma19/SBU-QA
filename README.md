@@ -18,6 +18,9 @@ Most of our work is in 3 files -
 ### fine_tuning_squad.ipynb (colab notebook)                                                                  
 In the BERT module, we load the pre-trained embedding and run run_squad.py which was given with the BERT repository.
 Also, you can run the colab notebook  - https://colab.research.google.com/drive/1vaWITP0EmlmDn-bxAckzrxM8T_gbCAdj
+### DownloadWebsite.py
+This file is responsible to download wikipedia data of stony brook university and it will format data such that it can be trained using 
+
 # SETUP
 We use Google collaboratory to explore the BERT model and out experiments went well so we decided to fine tune our network on colab, so the it does not matter where you keep files locally, you need to upload them to the notebooks directory structure or upload it to your drive and then mount your drive. The folder BERT/bert_reqs contains all the requirements you'll need, so make sure you're using it correctly in colab. There are 2 options - 
 - Upload file directly from local system
